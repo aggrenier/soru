@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="title" content="Nick Sory - Thank You">
+    <meta name="description" content="Independent Toronto based Ottawa born Hip-Hop/R&B Artist">
+    <meta name="author" content="">
+    <meta property="og:title" content="Nick Soru" />
+    <meta property="og:url" content="http://www.nicksoru.com/" />
+    <meta property="og:description" content="Independent Toronto based Ottawa born Hip-Hop/R&B Artist" />
+    <meta property="og:image" content="http://nicksoru.com/img/bg-span-new.jpg" />
+    <link rel="shortcut icon" href="http://www.nicksoru.com/media/lion.ico?v=2" />
+
+    <title>Nick Soru</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img class="main-logo" src="img/header-logo-new.png" />
+
+                        <h1>Someone will get in touch with you</h1>
+
+                        <a class="btn" href="/" style="color:#E0D5C7;">Return</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <link href="js/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/grayscale.min.js"></script>
+
+
+    <script>
+    $( document ).ready(function() {
+
+        var feed = new Instafeed({  // atomic feed
+            get: 'user',
+            userId: 31334358,
+            accessToken: '31334358.8f76f20.8b3399cfbefb42c495cf8db995cd2fc5',
+            resolution: 'standard_resolution',
+            limit: 12,
+            template:
+            '<div class="col-lg-3"> <a href="\{\{link\}\}embed"> <div class="gallery-img" style="background: url({{image}}); background-size: cover;"> </div> </a> </div>',
+            after: function() {
+              $('#instafeed a').fancybox({
+                type: 'iframe',
+                padding: 0,
+                overlayColor: '#000',
+                overlayOpacity: 0.9,
+                autoScale: true,
+                autoDimensions: true,
+                scrolling: 'no',
+                // width: 600,
+                // height: 640,
+                helpers: {
+                  overlay: {
+                    locked: false
+                  }
+                }
+              });
+            }
+        });
+
+        feed.run();
+
+
+    });
+  </script>
+
+</body>
+
+</html>
